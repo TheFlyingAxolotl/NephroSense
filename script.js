@@ -18,7 +18,7 @@ function startCamera() {
       setTimeout(() => {
         stopCamera();
         startProcessing();
-      }, 3000);
+      }, 4500);
     })
     .catch((error) => {
       alert('Error accessing the camera: ' + error.message);
