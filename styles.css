@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #673ab7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.subheader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.0rem;
+  font-weight: 300;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.scan-container {
+  margin-top: 30px;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #4a90e2, #673ab7);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.20);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+#results:not(.hidden),
+#graphs:not(.hidden) {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+#cameraFeed {
+  margin-top: 30px;
+}
+
+#cameraFeed video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+#processing {
+  margin-top: 30px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #673ab7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #673ab7;
+  color: white;
+  font-size: 1rem;
+}
+
+td {
+  font-size: 0.9rem;
+}
+
+.graph-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+canvas {
+  width: 80%; /* Smaller size for clarity */
+  max-width: 400px; /* Limit max width for larger screens */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
